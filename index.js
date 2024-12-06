@@ -1,8 +1,4 @@
-//  tutorial : https://codepen.io/ebinabo/pen/WNwjEaL
 
-/*
-https://gsap.com/
-*/
 document.getElementById('dark-mode-toggle').addEventListener('click', function () {
 
   const body = document.body;
