@@ -14,6 +14,12 @@
     <link rel="manifest" href="/site.webmanifest">
     <script src="index.js"></script>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
 
 
     <style>
@@ -23,6 +29,20 @@
       box-sizing: border-box;
       font-family: 'Satoshi', sans-serif;
     }
+      .card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
 
     /* Global Styles */
     body {
@@ -364,9 +384,10 @@
 
         <div class="experience-section" data-scroll data-scroll-speed="2">
           <!-- Research Lead -->
-          <div id="research-lead" class="experience">
-              <h2>Research Lead</h2>
-              <h3>EPICS at ASU</h3>
+          <div class="card" data-aos="fade-up">
+          <h2>Research Lead</h2>
+          <p>EPICS at ASU</p>
+          </div>
               <p><strong>Aug 2024 - Present · 5 mos</strong></p>
               <p><strong>Tempe, Arizona, United States · On-site</strong></p>
               <p>
