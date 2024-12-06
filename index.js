@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Register GSAP Plugins
-  gsap.registerPlugin(Draggable, InertiaPlugin);
+  gsap.registerPlugin(Draggable);
 
-  // Smooth Scrolling
+  // Smooth Scrolling with Lenis
   const lenis = new Lenis({
     duration: 1.2,
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Custom easing function
@@ -135,44 +135,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const nextButton = document.querySelector('[data-slider="button-next"]');
     const prevButton = document.querySelector('[data-slider="button-prev"]');
 
-    const totalElement = document.querySelector('[data-slide-count="total"]');
-    const stepElement = document.querySelector('[data-slide-count="step"]');
-    const stepsParent = stepElement.parentElement;
+    const loop = gsap.timeline({ repeat: -1, paused: true });
 
-    let activeElement;
-    const totalSlides = slides.length;
-
-    // Update total slides text, prepend 0 if less than 10
-    totalElement.textContent = totalSlides < 10 ? `0${totalSlides}` : totalSlides;
-
-    // Create step elements dynamically
-    stepsParent.innerHTML = ""; // Clear any existing steps
-    slides.forEach((_, index) => {
-      const stepClone = stepElement.cloneNode(true); // Clone the single step
-      stepClone.textContent =
-        index + 1 < 10 ? `0${index + 1}` : index + 1;
-      stepsParent.appendChild(stepClone); // Append to the parent container
+    slides.forEach((slide, i) => {
+      loop.to(slide, { xPercent: -100 * i, duration: 1, ease: "power1.inOut" });
     });
 
-    // Dynamically generated steps
-    const allSteps = stepsParent.querySelectorAll('[data-slide-count="step"]');
-
-    const loop = gsap.to(slides, {
-      xPercent: -100 * (slides.length - 1),
-      duration: 1,
-      paused: true,
-      snap: { xPercent: -100 },
-      modifiers: {
-        xPercent: gsap.utils.wrap(-100 * slides.length, 0),
-      },
-    });
-
-    nextButton.addEventListener("click", () =>
-      loop.play().timeScale(1.5)
-    );
-    prevButton.addEventListener("click", () =>
-      loop.reverse().timeScale(1.5)
-    );
+    nextButton.addEventListener("click", () => loop.play());
+    prevButton.addEventListener("click", () => loop.reverse());
   }
 
   initSlider();
