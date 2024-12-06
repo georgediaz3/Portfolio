@@ -1,0 +1,532 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <meta name="supported-color-schemes" content="light">
+    
+
+    <title>George Diaz</title>
+
+    <link rel="stylesheet" href="https://api.fontshare.com/css?f[]=satoshi@1,300,301,700&f[]=clash-grotesk@1,200,201,600&f[]=quicksand@1,500,600,700&display=swap">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Satoshi', sans-serif;
+    }
+
+    /* Global Styles */
+    body {
+      font-family: 'Satoshi', sans-serif;
+      user-select: none;
+      overflow-x: hidden;
+      background-color: #fbfbf0;
+      color: #2f2f2f;
+      transition: background-color 0.5s, color 0.5s;
+      width: 100%;
+    }
+
+    main {
+      padding: 0 2rem;
+    }
+
+    .dark-mode {
+      background-color: #2f2f2f;
+      color: #f6f6dc;
+    }
+
+    /* Top Bar */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      z-index: 12;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      background-color: inherit;
+    }
+
+    .top-bar a {
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: inherit;
+      margin-right: 1rem;
+    }
+
+    .top-bar button {
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      border: none;
+      background-color: #2f2f2f;
+      color: #f6f6dc;
+      border-radius: 4px;
+    }
+
+    .dark-mode .top-bar button {
+      background-color: #444;
+    }
+
+    /* Header Section */
+    .header {
+      text-align: center;
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+
+    .header h1 {
+      font-family: 'Clash Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 60px;
+      margin-bottom: 0.5rem;
+    }
+
+    .nav-bar ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+    }
+
+    .nav-bar li {
+      margin: 0 1rem;
+    }
+
+    .nav-bar a {
+      font-weight: 300;
+      text-decoration: none;
+      color: inherit;
+      font-size: 1.25rem;
+    }
+
+    /* Section Titles */
+    .title-section {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .subtitle-section {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      color: #555;
+    }
+
+    /* Main Sections */
+    .main-section {
+      padding: 2rem;
+      padding-top: 10rem;
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    .main-section h2 {
+      font-family: 'Clash Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .main-section p {
+      font-weight: 300;
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    /* Portfolio Section */
+    .portfolio-section {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 2rem 1rem;
+    }
+
+    .project-header {
+      margin-bottom: 1.5rem;
+    }
+
+    .project-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: space-between;
+    }
+
+    .project-details, .project-contributions {
+      flex: 1 1 45%;
+    }
+
+    .project-details ul, .project-contributions ul {
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-details h4, .project-contributions h4 {
+      margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .project-content {
+        flex-direction: column;
+      }
+
+      .project-details, .project-contributions {
+        flex: 1 1 100%;
+      }
+    }
+
+    /* Contact Section */
+    .contact-section {
+      padding: 3rem 1rem;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+
+    .contact-info ul {
+      list-style: none;
+      padding: 0;
+      margin: 2rem 0 0 0;
+    }
+
+    .contact-info li {
+      margin-bottom: 0.75rem;
+      font-size: 1.2rem;
+    }
+
+    .contact-info a {
+      text-decoration: none;
+      color: #2f2f2f;
+      font-weight: bold;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      padding: 2rem 1rem;
+      border-top: 1px solid;
+      border-color: #2f2f2f;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    footer div {
+      flex: 1 1 200px;
+      margin-bottom: 1rem;
+    }
+
+    footer h2 {
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    footer ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    footer li {
+      margin-bottom: 0.5rem;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Responsive Design for Footer */
+    @media (max-width: 767px) {
+      footer {
+        flex-direction: column;
+      }
+    }
+
+    /* Dark Mode Toggle */
+    .toggle-button-cover {
+      display: table-cell;
+      position: relative;
+      box-sizing: border-box;
+      transform: scale(0.45);
+      transform-origin: center right;
+    }
+
+    .button-cover {
+      height: 100px;
+      margin: 20px;
+      background-color: #fff;
+      box-shadow: 0 10px 20px -8px #c5d6d6;
+      border-radius: 4px;
+    }
+
+    .button {
+      position: relative;
+      top: 50%;
+      width: 74px;
+      height: 36px;
+      margin: -20px auto 0 auto;
+      overflow: hidden;
+    }
+
+    .button.r {
+      border-radius: 100px;
+    }
+
+    .checkbox {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      opacity: 0;
+      cursor: pointer;
+      z-index: 3;
+    }
+
+    .knobs {
+      z-index: 2;
+    }
+
+    .layer {
+      width: 100%;
+      background-color: #f6f6dc;
+      transition: 0.3s ease all;
+      z-index: 1;
+    }
+
+    .checkbox:checked ~ .layer {
+      background-color: #fcebeb;
+    }
+
+    .profile-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem; /* Adjust spacing below the image */
+    }
+
+    .profile-image {
+        width: 300px; /* Adjust size */
+        height: 300px; /* Adjust size */
+        border-radius: 50%; /* Makes the image a circle */
+        object-fit: cover; /* Ensures the image scales well inside the circle */
+        border: 3px solid #000; /* Optional: Adds a border around the circle */
+    }
+
+  </style>
+  </head>
+  <body>
+
+    <main data-scroll-container class="content" id="top">
+
+      <div class="top-bar">        
+
+        <div>
+          <a class="go" href="#top">360°</a>
+        </div>
+
+
+      </div>
+
+      <div class="header" data-scroll-section>
+
+        <header><h1>My Porfolio</h1></header>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+        <nav class="nav-bar">
+          <ul>
+            <li><a href="#home" data-scroll>Home</a></li>
+            <li><a href="#about" data-scroll>About</a></li>
+            <li><a href="#case-studies" data-scroll>Expirence</a></li>
+            <li><a href="#portfolio" data-scroll>Portfolio</a></li>
+            <li><a href="#team" data-scroll>Races</a></li>
+            <li><a href="#contact" data-scroll>Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <section id="home" class="main-section" data-scroll-section>
+        <div class="profile-container">
+            <img src="GeorgeDiazHeadshot.jpg" alt="George Diaz Headshot" class="profile-image">
+        </div>
+        <h2 class="title-section" data-scroll data-scroll-speed="1">George Diaz</h2>
+        <p class="subtitle-section" data-scroll data-scroll-speed="2">| Arizona State Univeristy | Student | Computer Systems Engineering |</p>
+
+        <div class="swiper-container slider-column">
+          <div class="swiper swiper-slider">
+            <div class="swiper-wrapper">
+            </div>
+          </div>
+          <span class="progressbar"></span>
+        </div>
+      </section>
+
+      <section id="about" class="main-section" data-scroll-section>
+        <h2 class="title-section" data-scroll data-scroll-speed="1">About Me</h2>
+        <p class="subtitle-section" data-scroll data-scroll-speed="2">Pursuing my degree at Arizona State University, I am immersed in academic rigor and real-world applications. My experiences in research project management and team collaboration are preparing me for the intersection of technology and sustainability. Through this, we aim to make significant contributions to solving pressing environmental challenges.</p>
+      </section>
+
+      <section id="case-studies" class="main-section" data-scroll-section>
+
+        <div class="experience-section" data-scroll data-scroll-speed="2">
+          <!-- Research Lead -->
+          <div id="research-lead" class="experience">
+              <h2>Research Lead</h2>
+              <h3>EPICS at ASU</h3>
+              <p><strong>Aug 2024 - Present · 5 mos</strong></p>
+              <p><strong>Tempe, Arizona, United States · On-site</strong></p>
+              <p>
+                  Led a team of undergraduate engineers in researching and developing wildlife drowning 
+                  prevention strategies in human-made lakes at Indian Steele Park in Phoenix, AZ. 
+                  Collaborated with the city of Phoenix and industry partners to manage project communication 
+                  and create prototypes using CAD, 3D printing, and laser cutting.
+              </p>
+              <p>
+                  <strong>Skills:</strong> Research Project Management · Team Leadership · Research Collaboration 
+                  · Computer-Aided Design (CAD) · Prototyping · Public Speaking · Interpersonal Communication · 
+                  Project Management
+              </p>
+          </div>
+
+          <!-- Initiative Verification Clerk -->
+          <div id="initiative-verification" class="experience">
+              <h2>Initiative Verification Clerk</h2>
+              <h3>Secretary of State, Arizona</h3>
+              <p><strong>Jun 2024 - Aug 2024 · 3 mos</strong></p>
+              <p><strong>Phoenix, Arizona, United States · On-site</strong></p>
+              <p>
+                  In my role as an Initiative Verification Clerk at the Secretary of State, Arizona, I meticulously 
+                  analyzed initiative petitions using Excel and private systems to verify completion accuracy. 
+                  I ensured compliance with legal standards and quality controlled others' work to maintain 
+                  accuracy and efficiency in the verification process.
+              </p>
+              <p>
+                  <strong>Skills:</strong> Data Entry · Team Leadership · Microsoft Excel · Interpersonal Communication
+              </p>
+          </div>
+
+          <!-- KEYS Intern -->
+          <div id="keys-intern" class="experience">
+              <h2>KEYS Intern</h2>
+              <h3>University of Arizona, Eller College of Management</h3>
+              <p><strong>Jun 2023 - Jul 2023 · 2 mos</strong></p>
+              <p><strong>Tucson, Arizona, United States · Hybrid</strong></p>
+              <p>
+                  In my role as a KEYS Intern at the University of Arizona, Eller College of Management, I analyzed 
+                  Electronic Health Records using Python and Rstudio, collaborated with teams to problem solve, 
+                  and develop literacy skills.
+              </p>
+              <p>
+                  <strong>Skills:</strong> Programming Languages · Team Leadership · Public Speaking · Problem Solving · 
+                  Interpersonal Communication · Data Analysis · Collaboration in Healthcare · Research Skills · 
+                  Professional Skills
+              </p>
+              <!-- Slideshow -->
+            <div class="slideshow" style="display: flex; justify-content: center; align-items: center; gap: 10px; overflow-x: auto; padding: 10px;">
+                <div class="slide" style="flex: 0 0 auto; display: flex; justify-content: center; align-items: center; width: 150px; height: 150px;">
+                    <img src="KEYS_2023_research_showcase_credit_biocommunications-204.jpg" alt="Description of image 1" style="max-width: 100%; max-height: 100%; border-radius: 5px;">
+                </div>
+                <div class="slide" style="flex: 0 0 auto; display: flex; justify-content: center; align-items: center; width: 150px; height: 150px;">
+                    <img src="KEYS_2023_research_showcase_credit_biocommunications-211.jpg" alt="Description of image 2" style="max-width: 100%; max-height: 100%; border-radius: 5px;">
+                </div>
+                <div class="slide" style="flex: 0 0 auto; display: flex; justify-content: center; align-items: center; width: 150px; height: 150px;">
+                    <img src="KEYS_2023_research_showcase_credit_biocommunications-391.jpg" alt="Description of image 3" style="max-width: 100%; max-height: 100%; border-radius: 5px;">
+                </div>
+                <div class="slide" style="flex: 0 0 auto; display: flex; justify-content: center; align-items: center; width: 150px; height: 150px;">
+                    <img src="KEYS_2023_research_showcase_credit_biocommunications-389.jpg" alt="Description of image 3" style="max-width: 100%; max-height: 100%; border-radius: 5px;">
+                </div>
+                <div class="slide" style="flex: 0 0 auto; display: flex; justify-content: center; align-items: center; width: 150px; height: 150px;">
+                  <img src="KEYS_2023_Research_Showcase.jpg" alt="Description of image 3" style="max-width: 100%; max-height: 100%; border-radius: 5px;">
+                </div>
+            </div>
+          </div>
+
+
+
+
+
+          <section id="portfolio" class="main-section" data-scroll-section>
+            <h2 class="title-section" data-scroll data-scroll-speed="1">Portfolio</h2>
+
+            <div id="indian-steele-park-animal-buoy-project" class="portfolio-section">
+              <div class="project-header">
+                <h3>Indian Steele Park Animal Buoy Project</h3>
+                <p>
+                  A collaborative effort under ASU’s EPICS program to design a sustainable buoy system 
+                  that aids wildlife, particularly ducks, in safely exiting the steep banks of the park’s pond.
+                </p>
+              </div>
+
+              <div class="project-content">
+                <div class="project-details">
+                  <h4>Key Features</h4>
+                  <ul>
+                    <li>Stable and buoyant design to support multiple animals.</li>
+                    <li>Eco-friendly materials: High-Density Polyethylene (HDP).</li>
+                    <li>Easy installation and minimal maintenance.</li>
+                    <li>Integrated ramp for safe animal access.</li>
+                  </ul>
+
+                  <h4>Challenges & Solutions</h4>
+                  <ul>
+                    <li><strong>Challenge:</strong> Stability in varying water conditions.<br>
+                        <strong>Solution:</strong> Adjustable anchoring mechanisms.</li>
+                    <li><strong>Challenge:</strong> Eco-friendly design.<br>
+                        <strong>Solution:</strong> Used HDP for durability and environmental safety.</li>
+                  </ul>
+                </div>
+
+                <div class="project-contributions">
+                  <h4>My Contributions</h4>
+                  <ul>
+                    <li>Led research and development of prototypes.</li>
+                    <li>Managed team communication and timelines.</li>
+                    <li>Coordinated with stakeholders to align project goals.</li>
+                  </ul>
+
+                  <h4>Outcome</h4>
+                  <p>
+                    A functional and scalable solution for wildlife accessibility in urban parks, combining 
+                    sustainability and innovative engineering.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Contact Section -->
+          <section id="contact" class="main-section contact-section" data-scroll-section>
+            <h2 class="title-section" data-scroll data-scroll-speed="1">Contact Me</h2>
+            <p class="subtitle-section" data-scroll data-scroll-speed="2">Feel free to reach out via email or follow me on social media.</p>
+
+            <div class="contact-info">
+              <ul>
+                <li>Email: <a href="mailto:georgezdiaz@gmail.com">georgezdiaz@gmail.com</a></li>
+                <li>LinkedIn: <a href="www.linkedin.com/in/george-diaz-06a825314" target="_blank">www.linkedin.com/in/george-diaz-06a825314</a></li>
+                <li>GitHub: <a href="https://github.com/georgediaz3" target="_blank">github.com/georgediaz3</a></li>
+              </ul>
+            </div>
+          </section>
+
+
+
+
+          
