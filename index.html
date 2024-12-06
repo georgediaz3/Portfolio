@@ -75,41 +75,12 @@
       box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
       padding: 2rem;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    .card .more-info {
-      display: none;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(255, 255, 255, 0.95);
-      padding: 2rem;
-      overflow-y: auto;
-      box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .card:hover .more-info {
-      display: block;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      grid-template-columns: 1fr;
       gap: 2rem;
-    }
-
-    .swiper-container {
-      margin: 2rem auto;
-      max-width: 800px;
     }
 
     footer {
@@ -155,25 +126,16 @@
         <h3>Research Lead</h3>
         <p><strong>EPICS at ASU</strong></p>
         <p>Led a team to develop wildlife drowning prevention strategies at Indian Steele Park, utilizing CAD and prototyping techniques.</p>
-        <div class="more-info">
-          <p>Collaborated with the City of Phoenix to design eco-friendly solutions. Utilized advanced prototyping methods including laser cutting and 3D printing. Managed a team of diverse engineers, fostering innovation and problem-solving skills.</p>
-        </div>
       </div>
       <div class="card">
         <h3>Initiative Verification Clerk</h3>
         <p><strong>Secretary of State, Arizona</strong></p>
         <p>Analyzed initiative petitions to ensure accuracy and compliance with legal standards.</p>
-        <div class="more-info">
-          <p>Handled large-scale data entry projects with precision. Conducted quality assurance checks and trained team members on efficient workflow strategies.</p>
-        </div>
       </div>
       <div class="card">
         <h3>KEYS Intern</h3>
         <p><strong>University of Arizona</strong></p>
         <p>Analyzed Electronic Health Records using Python, contributing to healthcare research initiatives.</p>
-        <div class="more-info">
-          <p>Developed Python scripts to process healthcare data, ensuring actionable insights. Presented findings at research showcases, emphasizing real-world applications.</p>
-        </div>
       </div>
     </div>
   </section>
@@ -184,20 +146,18 @@
       <div class="card">
         <h3>Indian Steele Park Animal Buoy Project</h3>
         <p>Collaborated with ASU’s EPICS program to design sustainable buoy systems aiding wildlife, particularly ducks, in safely exiting steep pond banks.</p>
-        <div class="more-info">
-          <p><strong>Key Features:</strong></p>
-          <ul>
-            <li>Stable and buoyant design supporting multiple animals.</li>
-            <li>Eco-friendly materials: High-Density Polyethylene (HDP).</li>
-            <li>Easy installation and minimal maintenance.</li>
-            <li>Integrated ramp for safe animal access.</li>
-          </ul>
-          <p><strong>Challenges & Solutions:</strong></p>
-          <ul>
-            <li><strong>Challenge:</strong> Stability in varying water conditions.<br><strong>Solution:</strong> Adjustable anchoring mechanisms.</li>
-            <li><strong>Challenge:</strong> Eco-friendly design.<br><strong>Solution:</strong> Used HDP for durability and environmental safety.</li>
-          </ul>
-        </div>
+        <p><strong>Key Features:</strong></p>
+        <ul>
+          <li>Stable and buoyant design supporting multiple animals.</li>
+          <li>Eco-friendly materials: High-Density Polyethylene (HDP).</li>
+          <li>Easy installation and minimal maintenance.</li>
+          <li>Integrated ramp for safe animal access.</li>
+        </ul>
+        <p><strong>Challenges & Solutions:</strong></p>
+        <ul>
+          <li><strong>Challenge:</strong> Stability in varying water conditions.<br><strong>Solution:</strong> Adjustable anchoring mechanisms.</li>
+          <li><strong>Challenge:</strong> Eco-friendly design.<br><strong>Solution:</strong> Used HDP for durability and environmental safety.</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -218,21 +178,5 @@
   <script>
     AOS.init();
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-  <script>
-    const swiper = new Swiper('.swiper-container', {
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    });
-  </script>
 </body>
 </html>
-
-
-
-
-
-          
