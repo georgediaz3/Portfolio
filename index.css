@@ -291,6 +291,15 @@ body {
   top: -20%;
 }
 
+body {
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+
 @font-face {
   font-family: 'PP Neue Corp Wide';
   src: url('https://cdn.prod.website-files.com/671752cd4027f01b1b8f1c7f/6717e399d30a606fed425914_PPNeueCorp-WideUltrabold.woff2') format('woff2');
