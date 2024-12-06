@@ -1,93 +1,55 @@
-/* General Reset */
-body {
-  margin: 0;
-  font-family: 'Satoshi', sans-serif;
-  background: black;
-  color: white;
-  scroll-behavior: smooth;
-  overflow: hidden;
+@font-face {
+  font-family: 'PP Neue Corp Tight';
+  src: url('https://cdn.prod.website-files.com/673af51dea86ab95d124c3ee/673b0f5784f7060c0ac05534_PPNeueCorp-TightUltrabold.otf') format('opentype');
+  font-weight: 700;
 }
 
-header {
-  text-align: center;
-  padding: 1rem;
+.osmo-ui {
+  z-index: 0;
+  flex-flow: column;
 }
 
-header h1 {
-  font-size: 2.5rem;
-  color: white;
+.nav {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #131313;
 }
 
-nav ul {
-  display: flex;
-  justify-content: center;
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.menu {
+  position: relative;
+  width: 35em;
+  height: 100%;
+}
+
+.menu-list {
   list-style: none;
   padding: 0;
 }
 
-nav a {
-  color: white;
-  margin: 0 1rem;
+.menu-list-item {
+  margin-bottom: 1em;
+}
+
+.menu-link {
   text-decoration: none;
-}
-
-.section {
-  padding: 2rem;
-  text-align: center;
-}
-
-.overlay {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 80%;
-  margin: 0 auto;
+  font-size: 2em;
+  font-weight: bold;
   color: white;
 }
 
-.overlay-inner {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.overlay-count-row {
-  font-size: 1.5rem;
-}
-
-.slider-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  width: 80%;
-  margin: 0 auto;
-}
-
-.slider-list {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.slider-slide {
-  min-width: 100%;
-  transition: transform 0.5s ease;
-}
-
-.slider-slide img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-/* Canvas Styling */
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
+.menu-button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5em;
 }
 
 
