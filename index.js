@@ -1,3 +1,19 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Custom easing function
+    smoothWheel: true,
+    smoothTouch: true,
+    infinite: false,
+  });
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+});
 
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
