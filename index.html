@@ -3,79 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>George Diaz - Portfolio</title>
-  <!-- Fonts -->
-  <link rel="stylesheet" href="https://api.fontshare.com/css?f[]=satoshi@1,300,700&display=swap">
-  <!-- External CSS -->
-  <link rel="stylesheet" href="index.css">
-  <!-- AOS Library for Animations -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <title>Responsive Navigation Menu</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
 </head>
 <body>
-  <canvas></canvas>
-
-  <header class="transparent">
-    <h1>George Diaz</h1>
-    <p>| Arizona State University | Computer Systems Engineering |</p>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section id="about" class="section transparent-card" data-aos="fade-up">
-    <h2>About Me</h2>
-    <p>
-      I am a Computer Systems Engineering student at Arizona State University with a passion for combining technology and sustainability. 
-      My experiences in research and project management equip me to tackle real-world challenges with innovative solutions.
-    </p>
-  </section>
-
-  <section id="experience" class="experience-section">
-    <div class="overlay">
-      <div class="overlay-inner">
-        <div class="overlay-count-row">
-          <div class="count-column"><h2 id="current-slide">01</h2></div>
-          <div class="count-row-divider"></div>
-          <div class="count-column"><h2>04</h2></div>
-        </div>
-        <div class="overlay-nav-row">
-          <button class="button" id="prev-button">←</button>
-          <button class="button" id="next-button">→</button>
-        </div>
+  <div class="osmo-ui">
+    <header class="header">
+      <div class="container is--full">
+        <nav class="nav-row">
+          <a href="#" aria-label="home" class="nav-logo-row">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 160 160" fill="none" class="nav-logo__icon">
+              <path d="M94.8284 53.8578C92.3086 56.3776 88 54.593 88 51.0294V0H72V59.9999C72 66.6273 66.6274 71.9999 60 71.9999H0V87.9999H51.0294C54.5931 87.9999 56.3777 92.3085 53.8579 94.8283L18.3431 130.343L29.6569 141.657L65.1717 106.142C67.684 103.63 71.9745 105.396 72 108.939V160H88.0001V99.9999C88 93.3725 93.3726 87.9999 100 87.9999H160V71.9999H108.939C105.407 71.9745 103.64 67.7091 106.12 65.1938L141.657 29.6568L130.343 18.3432L94.8284 53.8578Z" fill="currentColor"></path>
+            </svg>
+          </a>
+          <div class="nav-row__right">
+            <button role="button" data-menu-toggle class="menu-button">
+              <p class="menu-button-text">Menu</p>
+            </button>
+          </div>
+        </nav>
       </div>
-    </div>
-    <div class="slider-wrap">
-      <div class="slider-list">
-        <div class="slider-slide"><img src="image1.jpg" alt="Slide 1"></div>
-        <div class="slider-slide"><img src="image2.jpg" alt="Slide 2"></div>
-        <div class="slider-slide"><img src="image3.jpg" alt="Slide 3"></div>
-        <div class="slider-slide"><img src="image4.jpg" alt="Slide 4"></div>
-      </div>
+    </header>
+  </div>
+  <section class="cloneable">
+    <div data-nav="closed" class="nav">
+      <div data-menu-toggle class="overlay"></div>
+      <nav class="menu">
+        <div class="menu-bg">
+          <div class="bg-panel first"></div>
+          <div class="bg-panel second"></div>
+          <div class="bg-panel"></div>
+        </div>
+        <div class="menu-inner">
+          <ul class="menu-list">
+            <li class="menu-list-item">
+              <a href="#" class="menu-link">
+                <p class="menu-link-heading">About Us</p>
+                <p class="eyebrow">01</p>
+              </a>
+            </li>
+            <li class="menu-list-item">
+              <a href="#" class="menu-link">
+                <p class="menu-link-heading">Our Work</p>
+                <p class="eyebrow">02</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </div>
   </section>
-
-  <footer class="transparent">
-    <p>© 2024 George Diaz. All Rights Reserved.</p>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="index.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-     
-
 
