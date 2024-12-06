@@ -12,14 +12,11 @@
 
   <!-- AOS Library for Animations -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
-
-  <!-- Swiper.js for Sliders -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
 </head>
 <body>
   <canvas></canvas>
 
-  <header>
+  <header class="transparent">
     <h1>George Diaz</h1>
     <p>| Arizona State University | Computer Systems Engineering |</p>
     <nav>
@@ -32,7 +29,7 @@
     </nav>
   </header>
 
-  <section id="about" class="section" data-aos="fade-up">
+  <section id="about" class="section transparent-card" data-aos="fade-up">
     <h2>About Me</h2>
     <p>
       I am a Computer Systems Engineering student at Arizona State University with a passion for combining technology and sustainability. 
@@ -41,7 +38,7 @@
     <img src="KEYS_2023_research_showcase_credit_biocommunications-389.jpg" alt="Research Showcase 389" class="cover-copy">
   </section>
 
-  <section id="experience" class="section" data-aos="fade-up">
+  <section id="experience" class="section transparent-card" data-aos="fade-up">
     <h2>Experience</h2>
     <div class="grid">
       <div class="card">
@@ -63,7 +60,7 @@
     </div>
   </section>
 
-  <section id="portfolio" class="section" data-aos="fade-up">
+  <section id="portfolio" class="section transparent-card" data-aos="fade-up">
     <h2>Portfolio</h2>
     <div class="grid">
       <div class="card">
@@ -85,14 +82,14 @@
     </div>
   </section>
 
-  <section id="contact" class="section" data-aos="fade-up">
+  <section id="contact" class="section transparent-card" data-aos="fade-up">
     <h2>Contact Me</h2>
     <p>Email: <a href="mailto:georgezdiaz@gmail.com">georgezdiaz@gmail.com</a></p>
     <p>LinkedIn: <a href="https://linkedin.com/in/george-diaz">linkedin.com/in/george-diaz</a></p>
     <p>GitHub: <a href="https://github.com/georgediaz3">github.com/georgediaz3</a></p>
   </section>
 
-  <footer>
+  <footer class="transparent">
     <p>© 2024 George Diaz. All Rights Reserved.</p>
   </footer>
 
@@ -175,10 +172,9 @@
     onresize = () => {
       canvas.width = innerWidth * 2;
       canvas.height = innerHeight * 2;
-            canvas.style.width = innerWidth + 'px';
+      canvas.style.width = innerWidth + 'px';
       canvas.style.height = innerHeight + 'px';
-
-      clearTimeout(tim);
+            clearTimeout(tim);
       tim = setTimeout(() => {
         attractors = [];
         gen();
@@ -198,6 +194,7 @@
   </script>
 </body>
 </html>
+
 
      
 
