@@ -7,6 +7,8 @@
 
   <!-- Fonts -->
   <link rel="stylesheet" href="https://api.fontshare.com/css?f[]=satoshi@1,300,700&f[]=clash-grotesk@1,200,600&display=swap">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="index.css">
 
   <!-- AOS Library for Animations -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
@@ -14,106 +16,33 @@
   <!-- Swiper.js for Sliders -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
 
-  <!-- Styles -->
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Satoshi', sans-serif;
-      background: black;
-      color: white;
-      overflow-y: scroll;
-      line-height: 1.6;
-    }
-
-    header {
-      text-align: center;
-      padding: 2rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    header h1 {
-      font-family: 'Clash Grotesk', sans-serif;
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-
-    nav a {
-      text-decoration: none;
-      font-weight: bold;
-      color: inherit;
-    }
-
-    .section {
-      padding: 3rem 2rem;
-      background-color: rgba(0, 0, 0, 0.8);
-      margin-bottom: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      position: relative;
-      z-index: 1;
-    }
-
-    .section h2 {
-      font-family: 'Clash Grotesk', sans-serif;
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .card {
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 15px;
-      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-      padding: 2rem;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: rgba(0, 0, 0, 0.8);
-      color: white;
-      position: relative;
-      z-index: 1;
-    }
-
-    footer a {
-      color: white;
-      text-decoration: none;
-    }
-
-    canvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
-  </style>
+  <!-- GSAP and ScrollTrigger -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
 </head>
 <body>
-  <canvas></canvas>
+  <div class="parallax">
+    <section class="parallax__header">
+      <div class="parallax__visuals">
+        <div class="parallax__black-line-overflow"></div>
+        <div data-parallax-layers class="parallax__layers">
+          <img src="KEYS_2023_research_showcase_credit_biocommunications-204.jpg" loading="eager" width="800" data-parallax-layer="1" alt="" class="parallax__layer-img">
+          <img src="KEYS_2023_Research_Showcase.jpg" loading="eager" width="800" data-parallax-layer="2" alt="" class="parallax__layer-img">
+          <div data-parallax-layer="3" class="parallax__layer-title">
+            <h2 class="parallax__title">Parallax</h2>
+          </div>
+          <img src="KEYS_2023_research_showcase_credit_biocommunications-211.jpg" loading="eager" width="800" data-parallax-layer="4" alt="" class="parallax__layer-img">
+        </div>
+        <div class="parallax__fade"></div>
+      </div>
+    </section>
+    <section class="parallax__content">
+      <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 160 160" fill="none" class="osmo-icon-svg">
+        <path d="M94.8284 53.8578C92.3086 56.3776 88 54.593 88 51.0294V0H72V59.9999C72 66.6273 66.6274 71.9999 60 71.9999H0V87.9999H51.0294C54.5931 87.9999 56.3777 92.3085 53.8579 94.8283L18.3431 130.343L29.6569 141.657L65.1717 106.142C67.684 103.63 71.9745 105.396 72 108.939V160L88.0001 160L88 99.9999C88 93.3725 93.3726 87.9999 100 87.9999H160V71.9999H108.939C105.407 71.9745 103.64 67.7091 106.12 65.1938L106.142 65.1716L141.657 29.6568L130.343 18.3432L94.8284 53.8578Z" fill="currentColor"></path>
+      </svg>
+    </section>
+  </div>
 
   <header>
     <h1>George Diaz</h1>
@@ -134,6 +63,7 @@
       I am a Computer Systems Engineering student at Arizona State University with a passion for combining technology and sustainability. 
       My experiences in research and project management equip me to tackle real-world challenges with innovative solutions. I actively pursue new challenges in engineering design and collaboration.
     </p>
+    <img src="KEYS_2023_research_showcase_credit_biocommunications-389.jpg" alt="Research Showcase 389" class="cover-copy">
   </section>
 
   <section id="experience" class="section" data-aos="fade-up">
@@ -143,6 +73,7 @@
         <h3>Research Lead</h3>
         <p><strong>EPICS at ASU</strong></p>
         <p>Led a team to develop wildlife drowning prevention strategies at Indian Steele Park, utilizing CAD and prototyping techniques.</p>
+        <img src="KEYS_2023_research_showcase_credit_biocommunications-391.jpg" alt="Research Showcase 391" class="cover-copy">
       </div>
       <div class="card">
         <h3>Initiative Verification Clerk</h3>
@@ -190,107 +121,45 @@
     <p>© 2024 George Diaz. All Rights Reserved.</p>
   </footer>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS.init();
-  </script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Register GSAP Plugins
+      gsap.registerPlugin(ScrollTrigger);
+      // Parallax Layers
+      document.querySelectorAll('[data-parallax-layers]').forEach((triggerElement) => {
+        let tl = gsap.timeline({
+          scrollTrigger: {
+                        trigger: triggerElement,
+            start: "0% 0%",
+            end: "100% 0%",
+            scrub: 0
+          }
+        });
+        const layers = [
+          { layer: "1", yPercent: 70 },
+          { layer: "2", yPercent: 55 },
+          { layer: "3", yPercent: 40 },
+          { layer: "4", yPercent: 10 }
+        ];
+        layers.forEach((layerObj, idx) => {
+          tl.to(
+            triggerElement.querySelectorAll(`[data-parallax-layer="${layerObj.layer}"]`),
+            {
+              yPercent: layerObj.yPercent,
+              ease: "none"
+            },
+            idx === 0 ? undefined : "<"
+          );
+        });
+      });
+    });
 
-  <script>
-    const canvas = document.querySelector('canvas');
-    const ctx = canvas.getContext('2d');
-    canvas.width = innerWidth * 2;
-    canvas.height = innerHeight * 2;
-    canvas.style.width = innerWidth + 'px';
-    canvas.style.height = innerHeight + 'px';
-
-    let mx = 0, my = 0;
-    onpointermove = (e) => {
-      mx = e.clientX - innerWidth;
-      my = e.clientY / 300;
-    };
-
-    const r = (n = 1) => Math.random() * n;
-
-    function dejong(anchorX, anchorY) {
-      const aOffset = (Math.random() - 0.5) * 2;
-            const bOffset = (Math.random() - 0.5) * 2;
-      const cOffset = (Math.random() - 0.5) * 2;
-      const dOffset = (Math.random() - 0.5) * 2;
-
-      let sx = Math.random() * 2 - 1;
-      let sy = Math.random() * 2 - 1;
-      let s = 20 + 240 * Math.random() * Math.random();
-
-      let msx = 1 / (10 + Math.random() * 1000);
-      let msy = 1 / (100 + Math.random() * 1000);
-
-      let t = 0;
-      let rr = Math.PI * 2 * Math.random();
-      return function () {
-        const a = 1.4 + aOffset + (mx) * msx;
-        const b = -2.3 + bOffset + my * msy;
-        const c = 2.4 + cOffset + my * msy;
-        const d = -2.1 + dOffset - (mx) * msx;
-
-        let x = sx + t;
-        let y = sy + t;
-        t += 0.0001;
-
-        ctx.translate(anchorX, anchorY);
-        ctx.rotate(rr);
-        for (let i = 0; i < 500; i++) {
-          let newX = Math.sin(a * y) - Math.cos(b * x);
-          let newY = Math.sin(c * x) - Math.cos(d * y);
-          x = newX;
-          y = newY;
-
-          const plotX = x * s;
-          const plotY = y * s;
-
-          ctx.fillStyle = 'rgba(255, 255, 255, 1)';
-          ctx.fillRect(plotX, plotY, 2, 2);
-        }
-        ctx.setTransform(1, 0, 0, 1, 0, 0);
-      };
-    }
-
-    let attractors = [];
-
-    function gen() {
-      attractors = [];
-      for (let i = 0; i < 20; i++) {
-        attractors.push(dejong(Math.random() * canvas.width, Math.random() * canvas.height));
-      }
-    }
-    gen();
-
-    let tim;
-    onresize = () => {
-      canvas.width = innerWidth * 2;
-      canvas.height = innerHeight * 2;
-      canvas.style.width = innerWidth + 'px';
-      canvas.style.height = innerHeight + 'px';
-
-      clearTimeout(tim);
-      tim = setTimeout(() => {
-        attractors = [];
-        gen();
-      }, 200);
-    };
-
-    onclick = gen;
-
-    function loop() {
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-      attractors.forEach((fn) => fn());
-      requestAnimationFrame(loop);
-    }
-    loop();
+    /* Lenis */
+    const lenis = new Lenis();
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add((time) => { lenis.raf(time * 1000); });
+    gsap.ticker.lagSmoothing(0);
   </script>
 </body>
 </html>
-
 
