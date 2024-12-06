@@ -180,19 +180,25 @@
 
   <section id="portfolio" class="section" data-aos="fade-up">
     <h2>Portfolio</h2>
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="project1.jpg" alt="Project 1" style="width: 100%; border-radius: 10px;">
-        </div>
-        <div class="swiper-slide">
-          <img src="project2.jpg" alt="Project 2" style="width: 100%; border-radius: 10px;">
-        </div>
-        <div class="swiper-slide">
-          <img src="project3.jpg" alt="Project 3" style="width: 100%; border-radius: 10px;">
+    <div class="grid">
+      <div class="card">
+        <h3>Indian Steele Park Animal Buoy Project</h3>
+        <p>Collaborated with ASU’s EPICS program to design sustainable buoy systems aiding wildlife, particularly ducks, in safely exiting steep pond banks.</p>
+        <div class="more-info">
+          <p><strong>Key Features:</strong></p>
+          <ul>
+            <li>Stable and buoyant design supporting multiple animals.</li>
+            <li>Eco-friendly materials: High-Density Polyethylene (HDP).</li>
+            <li>Easy installation and minimal maintenance.</li>
+            <li>Integrated ramp for safe animal access.</li>
+          </ul>
+          <p><strong>Challenges & Solutions:</strong></p>
+          <ul>
+            <li><strong>Challenge:</strong> Stability in varying water conditions.<br><strong>Solution:</strong> Adjustable anchoring mechanisms.</li>
+            <li><strong>Challenge:</strong> Eco-friendly design.<br><strong>Solution:</strong> Used HDP for durability and environmental safety.</li>
+          </ul>
         </div>
       </div>
-      <div class="swiper-pagination"></div>
     </div>
   </section>
 
@@ -210,7 +216,21 @@
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS
+    AOS.init();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
+</body>
+</html>
+
 
 
 
