@@ -1,31 +1,64 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Background Animation
+  // Background Animation (Old Background)
   const canvas = document.querySelector("canvas");
   const ctx = canvas.getContext("2d");
 
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+  canvas.width = window.innerWidth * 2;
+  canvas.height = window.innerHeight * 2;
+  canvas.style.width = window.innerWidth + "px";
+  canvas.style.height = window.innerHeight + "px";
 
-  function drawBackground() {
-    ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+  let particles = [];
 
-    ctx.fillStyle = "rgba(255, 255, 255, 0.2)";
-    for (let i = 0; i < 100; i++) {
-      ctx.beginPath();
-      ctx.arc(
-        Math.random() * canvas.width,
-        Math.random() * canvas.height,
-        Math.random() * 2,
-        0,
-        Math.PI * 2
-      );
-      ctx.fill();
+  class Particle {
+    constructor(x, y) {
+      this.x = x;
+      this.y = y;
+      this.size = Math.random() * 3 + 1;
+      this.speedX = Math.random() * 3 - 1.5;
+      this.speedY = Math.random() * 3 - 1.5;
     }
 
-    requestAnimationFrame(drawBackground);
+    update() {
+      this.x += this.speedX;
+      this.y += this.speedY;
+
+      if (this.size > 0.2) this.size -= 0.1;
+    }
+
+    draw() {
+      ctx.fillStyle = "rgba(255, 255, 255, 0.7)";
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fill();
+    }
   }
-  drawBackground();
+
+  function handleParticles() {
+    for (let i = 0; i < particles.length; i++) {
+      particles[i].update();
+      particles[i].draw();
+
+      if (particles[i].size <= 0.3) {
+        particles.splice(i, 1);
+        i--;
+      }
+    }
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    handleParticles();
+    requestAnimationFrame(animate);
+  }
+
+  canvas.addEventListener("mousemove", (e) => {
+    for (let i = 0; i < 5; i++) {
+      particles.push(new Particle(e.x * 2, e.y * 2));
+    }
+  });
+
+  animate();
 
   // Slider Functionality
   const slides = document.querySelectorAll(".slider-slide");
@@ -52,7 +85,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   updateSlides();
 });
-
 
 
 
