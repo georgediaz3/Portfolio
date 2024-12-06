@@ -4,12 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>George Diaz - Portfolio</title>
-
   <!-- Fonts -->
   <link rel="stylesheet" href="https://api.fontshare.com/css?f[]=satoshi@1,300,700&f[]=clash-grotesk@1,200,600&display=swap">
   <!-- External CSS -->
   <link rel="stylesheet" href="index.css">
-
   <!-- AOS Library for Animations -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 </head>
@@ -37,82 +35,44 @@
     </p>
   </section>
 
-  <section id="experience" class="cloneable">
-  <div class="overlay">
-    <div class="overlay-inner">
-      <div class="overlay-count-row">
-        <div class="count-column">
-          <h2 data-slide-count="step" class="count-heading">01</h2>
-        </div>
-        <div class="count-row-divider"></div>
-        <div class="count-column">
-          <h2 data-slide-count="total" class="count-heading">03</h2>
-        </div>
-      </div>
-      <div class="overlay-nav-row">
-        <button aria-label="previous slide" data-slider="button-prev" class="button">
-          <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 17 12" fill="none" class="button-arrow">
-            <path d="M6.28871 12L7.53907 10.9111L3.48697 6.77778H16.5V5.22222H3.48697L7.53907 1.08889L6.28871 0L0.5 6L6.28871 12Z" fill="currentColor"></path>
-          </svg>
-        </button>
-        <button aria-label="next slide" data-slider="button-next" class="button">
-          <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 17 12" fill="none" class="button-arrow next">
-            <path d="M6.28871 12L7.53907 10.9111L3.48697 6.77778H16.5V5.22222H3.48697L7.53907 1.08889L6.28871 0L0.5 6L6.28871 12Z" fill="currentColor"></path>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-  <div class="main">
+  <section id="experience" class="experience-section">
     <div class="slider-wrap">
-      <div data-slider="list" class="slider-list">
-        <!-- Card 1: Research Lead -->
-        <div data-slider="slide" class="slider-slide">
-          <div class="slide-inner">
-            <h3>Research Lead</h3>
-            <p><strong>EPICS Program at ASU</strong></p>
-            <p>Led a team to develop wildlife drowning prevention strategies at Indian Steele Park.</p>
-            <ul>
-              <li>Managed research and development of prototypes.</li>
-              <li>Coordinated team communication and timelines.</li>
-              <li>Collaborated with the city of Phoenix and industry partners.</li>
-            </ul>
-          </div>
+      <button aria-label="Previous Experience" class="nav-arrow" id="prev-button">‹</button>
+      <div class="slider">
+        <div class="slider-card">
+          <h3>Research Lead</h3>
+          <p><strong>EPICS Program at ASU</strong></p>
+          <p>Led a team to develop wildlife drowning prevention strategies at Indian Steele Park.</p>
+          <ul>
+            <li>Managed research and development of prototypes.</li>
+            <li>Coordinated team communication and timelines.</li>
+            <li>Collaborated with the city of Phoenix and industry partners.</li>
+          </ul>
         </div>
-
-        <!-- Card 2: Initiative Verification Clerk -->
-        <div data-slider="slide" class="slider-slide">
-          <div class="slide-inner">
-            <h3>Initiative Verification Clerk</h3>
-            <p><strong>Arizona Secretary of State</strong></p>
-            <p>Analyzed initiative petitions to ensure accuracy and compliance with legal standards.</p>
-            <ul>
-              <li>Verified petition completion using Excel and private systems.</li>
-              <li>Ensured accuracy through quality control checks.</li>
-              <li>Collaborated with a team for efficient verification processes.</li>
-            </ul>
-          </div>
+        <div class="slider-card">
+          <h3>Initiative Verification Clerk</h3>
+          <p><strong>Arizona Secretary of State</strong></p>
+          <p>Analyzed initiative petitions to ensure accuracy and compliance with legal standards.</p>
+          <ul>
+            <li>Verified petition completion using Excel and private systems.</li>
+            <li>Ensured accuracy through quality control checks.</li>
+            <li>Collaborated with a team for efficient verification processes.</li>
+          </ul>
         </div>
-
-        <!-- Card 3: KEYS Intern -->
-        <div data-slider="slide" class="slider-slide">
-          <div class="slide-inner">
-            <h3>KEYS Intern</h3>
-            <p><strong>University of Arizona</strong></p>
-            <p>Analyzed electronic health records (EHR) using Python and RStudio to improve data insights.</p>
-            <ul>
-              <li>Developed skills in programming and data analysis.</li>
-              <li>Collaborated with a team to solve healthcare-related challenges.</li>
-              <li>Presented research findings at a showcase event.</li>
-            </ul>
-          </div>
+        <div class="slider-card">
+          <h3>KEYS Intern</h3>
+          <p><strong>University of Arizona</strong></p>
+          <p>Analyzed electronic health records (EHR) using Python and RStudio to improve data insights.</p>
+          <ul>
+            <li>Developed skills in programming and data analysis.</li>
+            <li>Collaborated with a team to solve healthcare-related challenges.</li>
+            <li>Presented research findings at a showcase event.</li>
+          </ul>
         </div>
       </div>
+      <button aria-label="Next Experience" class="nav-arrow" id="next-button">›</button>
     </div>
-  </div>
-</section>
-
-
+  </section>
 
   <section id="portfolio" class="section transparent-card" data-aos="fade-up">
     <h2>Portfolio</h2>
@@ -126,11 +86,6 @@
           <li>Eco-friendly materials: High-Density Polyethylene (HDP).</li>
           <li>Easy installation and minimal maintenance.</li>
           <li>Integrated ramp for safe animal access.</li>
-        </ul>
-        <p><strong>Challenges & Solutions:</strong></p>
-        <ul>
-          <li><strong>Challenge:</strong> Stability in varying water conditions.<br><strong>Solution:</strong> Adjustable anchoring mechanisms.</li>
-          <li><strong>Challenge:</strong> Eco-friendly design.<br><strong>Solution:</strong> Used HDP for durability and environmental safety.</li>
         </ul>
       </div>
     </div>
@@ -147,24 +102,13 @@
     <p>© 2024 George Diaz. All Rights Reserved.</p>
   </footer>
 
-  <!-- Scripts -->
   <!-- GSAP Core -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <!-- Draggable Plugin -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
-  <!-- Inertia Plugin -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/InertiaPlugin.min.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
-
-  <!-- Your script -->
   <script src="index.js"></script>
-  <script>
-    AOS.init();
-  </script>
 </body>
 </html>
+
+
 
 
      
