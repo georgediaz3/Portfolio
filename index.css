@@ -38,6 +38,7 @@ header h1 {
 header p {
   font-size: 1.25rem;
   margin: 0.5rem 0;
+  color: white;
 }
 
 nav ul {
