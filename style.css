@@ -29,7 +29,6 @@
   font-weight: 300; /* Light weight */
   font-family: 'Poppins', sans-serif; /* Ensure it applies here too */
 }
-
 @font-face {
   font-family: 'PP Neue Corp Tight';
   src: url('https://cdn.prod.website-files.com/673af51dea86ab95d124c3ee/673b0f5784f7060c0ac05534_PPNeueCorp-TightUltrabold.otf') format('opentype');
