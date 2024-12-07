@@ -1,24 +1,19 @@
-/* Hero Section Styling */
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 900
-
 .hero-title {
-  font-size: 30rem;
+  font-size: 5rem; /* Adjusted font size */
   margin-bottom: 10px;
-  margin-top: 10px;
+  margin-top: 0; /* Remove unnecessary top margin */
   font-weight: 900; /* Bold weight */
-  font-family: 'Doto', sans-serif; /* Ensure it applies here too */
+  font-family: 'Doto', sans-serif; /* Ensure it applies */
 }
 
 .hero {
   height: 100vh; /* Full viewport height */
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center; /* Vertically centers content */
+  justify-content: center; /* Horizontally centers content */
   background: transparent; /* Transparent background */
   color: black; /* Text remains black */
   text-align: center;
-  position: relative;
   font-family: "Doto", sans-serif; /* Apply the font */
 }
 
@@ -31,8 +26,9 @@
   font-size: 1.5rem;
   margin-bottom: 20px;
   font-weight: 300; /* Light weight */
-  font-family: 'Doto', sans-serif; /* Ensure it applies here too */
+  font-family: 'Doto', sans-serif; /* Ensure it applies */
 }
+
 @font-face {
   font-family: 'PP Neue Corp Tight';
   src: url('https://cdn.prod.website-files.com/673af51dea86ab95d124c3ee/673b0f5784f7060c0ac05534_PPNeueCorp-TightUltrabold.otf') format('opentype');
