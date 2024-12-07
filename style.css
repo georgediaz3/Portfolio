@@ -89,17 +89,23 @@
 }
 
 .hero-title {
-  font-family: 'PP Neue Corp Tight', sans-serif; /* Same as menu */
-  font-size: 3rem; /* Adjust for hero size */
+  font-size: 5.625em; /* Match the menu-link-heading font size */
+  font-weight: 700; /* Match the font weight */
+  line-height: 0.75; /* Match the line-height */
+  font-family: 'PP Neue Corp Tight', sans-serif; /* Same as menu heading */
+  text-transform: uppercase; /* Optional for consistency */
   margin-bottom: 10px;
-  font-weight: 600; /* Match menu font weight */
+  margin-top: 0;
+  color: black; /* Ensure readability */
 }
 
 .hero-subtitle {
-  font-family: 'PP Neue Corp Tight', sans-serif; /* Same as menu */
-  font-size: 1.5rem;
+  font-size: 2rem; /* Smaller size for subtitles */
+  font-weight: 400; /* A lighter weight for balance */
+  font-family: 'PP Neue Corp Tight', sans-serif; /* Match the font family */
+  color: blue; /* Optional color for styling */
+  text-transform: none; /* Subtitles may not need to be uppercase */
   margin-bottom: 20px;
-  font-weight: 400; /* Lighter for subtitles if needed */
 }
 
 
