@@ -1,102 +1,80 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Custom Menu with GSAP</title>
-  <link rel='stylesheet' href='https://slater.app/10324/23333.css'><link rel="stylesheet" href="./style.css">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>George Diaz Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<div class="osmo-ui">
+  <div class="osmo-ui">
     <header class="header">
       <div class="container is--full">
         <nav class="nav-row">
-          <div class="nav-row__right"><button role="button" data-menu-toggle="" class="menu-button">
-              <div class="menu-button-text">
-                <p class="p-large">Menu</p>
-                <p class="p-large">Close</p>
-              </div>
-              <div class="icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 16 16" fill="none" class="menu-button-icon">
-                  <path d="M7.33333 16L7.33333 -3.2055e-07L8.66667 -3.78832e-07L8.66667 16L7.33333 16Z" fill="currentColor"></path>
-                  <path d="M16 8.66667L-2.62269e-07 8.66667L-3.78832e-07 7.33333L16 7.33333L16 8.66667Z" fill="currentColor"></path>
-                  <path d="M6 7.33333L7.33333 7.33333L7.33333 6C7.33333 6.73637 6.73638 7.33333 6 7.33333Z" fill="currentColor"></path>
-                  <path d="M10 7.33333L8.66667 7.33333L8.66667 6C8.66667 6.73638 9.26362 7.33333 10 7.33333Z" fill="currentColor"></path>
-                  <path d="M6 8.66667L7.33333 8.66667L7.33333 10C7.33333 9.26362 6.73638 8.66667 6 8.66667Z" fill="currentColor"></path>
-                  <path d="M10 8.66667L8.66667 8.66667L8.66667 10C8.66667 9.26362 9.26362 8.66667 10 8.66667Z" fill="currentColor"></path>
-                </svg></div>
-            </button></div>
+          <button role="button" data-menu-toggle class="menu-button">
+            <div class="menu-button-text">
+              <p class="p-large">Menu</p>
+              <p class="p-large">Close</p>
+            </div>
+            <div class="icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 16 16" fill="none" class="menu-button-icon">
+                <path d="M7.33333 16L7.33333 -3.2055e-07L8.66667 -3.78832e-07L8.66667 16L7.33333 16Z" fill="currentColor"></path>
+                <path d="M16 8.66667L-2.62269e-07 8.66667L-3.78832e-07 7.33333L16 7.33333L16 8.66667Z" fill="currentColor"></path>
+              </svg>
+            </div>
+          </button>
         </nav>
       </div>
     </header>
   </div>
 
-<section class="cloneable">
+  <section class="cloneable">
     <div data-nav="closed" class="nav">
-      <div data-menu-toggle="" class="overlay"></div>
+      <div data-menu-toggle class="overlay"></div>
       <nav class="menu">
-        <div class="menu-bg">
-          <div class="bg-panel first"></div>
-          <div class="bg-panel second"></div>
-          <div class="bg-panel"></div>
-        </div>
         <div class="menu-inner">
           <ul class="menu-list">
-            <li class="menu-list-item">
-              <a href="#" class="menu-link w-inline-block">
-                <p class="menu-link-heading">About Me</p>
-                <p class="eyebrow">01</p>
-                <div class="menu-link-bg"></div>
-              </a>
-            </li>
-            <li class="menu-list-item">
-              <a href="#" class="menu-link w-inline-block">
-                <p class="menu-link-heading">Expirence</p>
-                <p class="eyebrow">02</p>
-                <div class="menu-link-bg"></div>
-              </a>
-            </li>
-            <li class="menu-list-item">
-              <a href="#" class="menu-link w-inline-block">
-                <p class="menu-link-heading">Portfolio</p>
-                <p class="eyebrow">03</p>
-                <div class="menu-link-bg"></div>
-              </a>
-            </li>
-            <li class="menu-list-item">
-              <a href="#" class="menu-link w-inline-block">
-                <p class="menu-link-heading">Aspirations</p>
-                <p class="eyebrow">04</p>
-                <div class="menu-link-bg"></div>
-              </a>
-            </li>
-            <li class="menu-list-item">
-              <a href="#" class="menu-link w-inline-block">
-                <p class="menu-link-heading">Contact</p>
-                <p class="eyebrow">05</p>
-                <div class="menu-link-bg"></div>
-              </a>
-            </li>
+            <li><a href="#about" class="menu-link">About Me</a></li>
+            <li><a href="#experience" class="menu-link">Experience</a></li>
+            <li><a href="#portfolio" class="menu-link">Portfolio</a></li>
+            <li><a href="#aspirations" class="menu-link">Aspirations</a></li>
+            <li><a href="#contact" class="menu-link">Contact</a></li>
           </ul>
-          <div class="menu-details">
-            <p data-menu-fade="" class="p-small">Socials</p>
-            <div class="socials-row">
-              <a data-menu-fade="" href="#" class="p-large text-link">Instagram</a>
-              <a data-menu-fade="" href="#" class="p-large text-link">LinkedIn</a>
-              <a data-menu-fade="" href="#" class="p-large text-link">X/Twitter</a>
-              <a data-menu-fade="" href="#" class="p-large text-link">Awwwards</a>
-            </div>
-          </div>
         </div>
       </nav>
     </div>
   </section>
 
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
-<!-- partial -->
-  <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js'></script>
-<script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js'></script><script  src="./script.js"></script>
+  <!-- Section Content -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>I am George Diaz, a Computer Systems Engineering student...</p>
+  </section>
 
+  <section id="experience" class="section">
+    <h2>Experience</h2>
+    <p>Research Lead at EPICS ASU, Initiative Verification Clerk, KEYS Intern...</p>
+  </section>
+
+  <section id="portfolio" class="section">
+    <h2>Portfolio</h2>
+    <p>Project: Wildlife Drowning Prevention...</p>
+  </section>
+
+  <section id="aspirations" class="section">
+    <h2>Aspirations</h2>
+    <p>I aspire to innovate in sustainability and technology...</p>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: georgezdiaz@gmail.com</p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/george-diaz">linkedin.com/in/george-diaz</a></p>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
