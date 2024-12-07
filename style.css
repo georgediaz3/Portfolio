@@ -113,7 +113,7 @@
   font-size: 3rem; /* Slightly smaller for subtitle */
   font-weight: 400; /* Normal weight for balance */
   font-family: 'PP Neue Corp Tight', sans-serif; /* Use desired font */
-  color: blue; /* Blue text for styling */
+  color: FF4C24; /* Blue text for styling */
   margin: 10px 0 0; /* Space between title and subtitle */
   text-transform: none; /* Default text case */
 }
