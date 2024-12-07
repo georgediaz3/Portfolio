@@ -337,7 +337,7 @@ html:not(.wf-design-mode) [data-slider="slide"].active .slide-caption{ opacity: 
   justify-content: center; /* Center vertically */
   text-align: center; /* Center text alignment */
   margin: 0; /* Remove any default margin */
-  background: transparent; /* Optional, to ensure no background */
+  background: white; /* Optional, to ensure no background */
 }
 
 .hero-title {
