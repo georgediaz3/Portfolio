@@ -1,3 +1,14 @@
+.nav[data-nav="open"] {
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav[data-nav="closed"] {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+
 .cloneable {
   padding: var(--container-padding);
   justify-content: center;
