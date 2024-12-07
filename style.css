@@ -39,7 +39,7 @@
 
 .goals-list li::before {
   content: "✔"; /* Checkmark icon */
-  color: #ff5722; /* Primary color */
+  color: white; /* Primary color */
   font-size: 1.2rem;
   position: absolute;
   left: 0;
