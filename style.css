@@ -3,7 +3,7 @@
   margin-bottom: 10px;
   margin-top: 0; /* Remove unnecessary top margin */
   font-weight: 900; /* Bold weight */
-  font-family: 'Doto', sans-serif; /* Ensure it applies */
+  font-family: 'Anton', sans-serif; /* Ensure it applies */
 }
 
 .hero {
@@ -14,7 +14,7 @@
   background: transparent; /* Transparent background */
   color: black; /* Text remains black */
   text-align: center;
-  font-family: "Doto", sans-serif; /* Apply the font */
+  font-family: "Anton", sans-serif; /* Apply the font */
 }
 
 .hero-content {
