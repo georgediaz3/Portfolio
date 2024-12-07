@@ -4,8 +4,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: white;
-  color: black;
+  background: transparent; /* Transparent background */
+  color: black; /* Text remains black */
   text-align: center;
   position: relative;
 }
@@ -27,23 +27,7 @@
   font-weight: 300;
 }
 
-.hero-button {
-  background: #ffffff;
-  color: #1e3a8a;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-.hero-button:hover {
-  background: #1e3a8a;
-  color: white;
-}
-
-/* Optional Background Animation */
+/* Optional Background Animation - Removed */
 .hero::after {
   content: '';
   position: absolute;
@@ -51,10 +35,10 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('https://source.unsplash.com/1920x1080/?technology,abstract') no-repeat center center/cover;
-  opacity: 0.2; /* Subtle background image */
-  z-index: -1; /* Place behind the content */
+  background: none; /* No background image */
+  z-index: -1; /* Placeholder for consistency */
 }
+
 
 
 
