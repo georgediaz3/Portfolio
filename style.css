@@ -1,3 +1,35 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.section {
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2rem;
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #ddd;
+}
+
+#home {
+  background-color: #ffeb3b;
+}
+
+#about {
+  background-color: #03a9f4;
+}
+
+#services {
+  background-color: #8bc34a;
+}
+
+#contact {
+  background-color: #e91e63;
+}
+
+
 .contact-section {
   padding: 80px 20px;
   background-color: #f9f9f9;
