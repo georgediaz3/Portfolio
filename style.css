@@ -2,7 +2,7 @@
 // <uniquifier>: Use a unique and descriptive class name
 // <weight>: Use a value from 100 to 900
 
-.doto {
+.doto-title {
   font-family: "Doto", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -26,13 +26,6 @@
 .hero-content {
   max-width: 600px;
   padding: 20px;
-}
-
-.hero-title {
-  font-size: 3rem;
-  margin-bottom: 10px;
-  font-weight: 600; /* Bold weight */
-  font-family: 'Poppins', sans-serif; /* Ensure it applies here too */
 }
 
 .hero-subtitle {
