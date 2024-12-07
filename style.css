@@ -76,12 +76,18 @@
 }
 
 .about-title {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 3rem; /* Make it very large */
+  font-weight: 700; /* Bold */
+  line-height: 1; /* Compact line spacing */
+  font-family: 'PP Neue Corp Tight', sans-serif; /* Use desired font */
+  color: black; /* Black text for contrast */
+  margin: 0; /* No extra spacing */
+  text-transform: uppercase; /* Optional for styling */
   margin-bottom: 20px;
 }
 
 .about-description {
+  font-family: 'PP Neue Corp Tight', sans-serif;
   font-size: 1.2rem;
   line-height: 1.6;
   max-width: 800px;
