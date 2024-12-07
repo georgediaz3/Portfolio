@@ -89,35 +89,35 @@
 }
 
 .hero {
-  height: 100vh; /* Full viewport height */
-  display: flex; /* Enable flexbox for centering */
+  height: 100vh; /* Full screen height */
+  display: flex; /* Enable Flexbox */
   flex-direction: column; /* Stack title and subtitle vertically */
   align-items: center; /* Center horizontally */
   justify-content: center; /* Center vertically */
-  background: transparent; /* Transparent background */
   text-align: center; /* Center text alignment */
-  color: black; /* Text remains black */
-  font-family: 'PP Neue Corp Tight', sans-serif; /* Ensure font consistency */
-  padding: 0 20px; /* Add padding for responsiveness */
+  margin: 0; /* Remove any default margin */
+  background: transparent; /* Optional, to ensure no background */
 }
 
 .hero-title {
-  font-size: 5.625em; /* Large font size */
-  font-weight: 700; /* Bold weight */
-  line-height: 0.75; /* Adjust spacing between lines */
-  text-transform: uppercase; /* Optional for consistency */
-  margin-bottom: 10px; /* Space below the title */
-  margin-top: 0; /* No top margin */
-  color: black; /* Ensure readability */
+  font-size: 8rem; /* Make it very large */
+  font-weight: 700; /* Bold */
+  line-height: 1; /* Compact line spacing */
+  font-family: 'PP Neue Corp Tight', sans-serif; /* Use desired font */
+  color: black; /* Black text for contrast */
+  margin: 0; /* No extra spacing */
+  text-transform: uppercase; /* Optional for styling */
 }
 
 .hero-subtitle {
-  font-size: 2rem; /* Slightly smaller size for subtitles */
-  font-weight: 400; /* A lighter weight for balance */
-  color: blue; /* Optional color for styling */
-  text-transform: none; /* Subtitles don't need to be uppercase */
-  margin-bottom: 20px; /* Space below the subtitle */
+  font-size: 3rem; /* Slightly smaller for subtitle */
+  font-weight: 400; /* Normal weight for balance */
+  font-family: 'PP Neue Corp Tight', sans-serif; /* Use desired font */
+  color: blue; /* Blue text for styling */
+  margin: 10px 0 0; /* Space between title and subtitle */
+  text-transform: none; /* Default text case */
 }
+
 
 
 
