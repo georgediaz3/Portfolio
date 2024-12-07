@@ -337,6 +337,7 @@ p{
   grid-row-gap: .625em;
   justify-content: flex-end;
   align-items: center;
+  background-color: #0000;
   margin: -1em;
   padding: 1em;
   display: flex;
