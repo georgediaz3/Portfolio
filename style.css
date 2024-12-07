@@ -2,14 +2,7 @@
 // <uniquifier>: Use a unique and descriptive class name
 // <weight>: Use a value from 100 to 900
 
-.doto-title {
-  font-family: "Doto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings:
-    "ROND" 0;
-}
+
 
 .hero {
   height: 100vh; /* Full viewport height */
