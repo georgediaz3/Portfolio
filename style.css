@@ -1,10 +1,61 @@
+.contact-section {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+  color: #333;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-family: 'PP Neue Corp Tight', sans-serif;
+}
+
+.contact-description {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.contact-info a {
+  color: #ff5722;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-link {
+  font-size: 1.1rem;
+  margin: 0 15px;
+  color: #ff5722;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.social-link:hover {
+  color: #e64a19;
+}
+
 .nav[data-nav="open"] {
   transform: translateX(0);
   transition: transform 0.3s ease-in-out;
 }
 
 .nav[data-nav="closed"] {
-  transform: translateX(-100%);
+  transform: translateX(0);
   transition: transform 0.3s ease-in-out;
 }
 
