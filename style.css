@@ -1,9 +1,3 @@
-body {
-  background-color: var(--color-black);
-  color: var(--color-light);
-  font-size: var(--size-font);
-}
-
 .cloneable {
   padding: var(--container-padding);
   justify-content: center;
