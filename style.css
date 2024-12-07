@@ -1,3 +1,73 @@
+.experience {
+  padding: 80px 20px;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.experience-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.experience-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+.experience-logo {
+  width: 80px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.experience-details {
+  flex: 1;
+}
+
+.experience-details h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.experience-company {
+  font-size: 1.2rem;
+  color: #777;
+  margin: 5px 0;
+}
+
+.experience-dates,
+.experience-location {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.experience-description {
+  margin: 15px 0;
+  line-height: 1.6;
+}
+
+.experience-skills {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.experience-skills li {
+  background: #e0e0e0;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 3px;
+  font-size: 0.9rem;
+}
+
+
 .about {
   padding: 80px 20px;
   background-color: #f9f9f9; /* Light background for contrast */
@@ -19,35 +89,23 @@
 }
 
 .hero-title {
-  font-size: 5rem; /* Adjusted font size */
+  font-family: 'PP Neue Corp Tight', sans-serif; /* Same as menu */
+  font-size: 3rem; /* Adjust for hero size */
   margin-bottom: 10px;
-  margin-top: 0; /* Remove unnecessary top margin */
-  font-weight: 900; /* Bold weight */
-  font-family: 'Nabla', sans-serif; /* Ensure it applies */
+  font-weight: 600; /* Match menu font weight */
 }
 
-.hero {
-  height: 100vh; /* Full viewport height */
-  display: flex;
-  align-items: center; /* Vertically centers content */
-  justify-content: center; /* Horizontally centers content */
-  background: transparent; /* Transparent background */
-  color: black; /* Text remains black */
-  text-align: center;
-  font-family: "Nabla", sans-serif; /* Apply the font */
+.hero-subtitle {
+  font-family: 'PP Neue Corp Tight', sans-serif; /* Same as menu */
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: 400; /* Lighter for subtitles if needed */
 }
+
 
 .hero-content {
   max-width: 600px;
   padding: 20px;
-}
-
-.hero-subtitle {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-  font-weight: 300; /* Light weight */
-  font-family: 'Nabla', sans-serif; /* Ensure it applies */
-  color: blue;
 }
 
 @font-face {
