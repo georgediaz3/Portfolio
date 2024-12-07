@@ -328,6 +328,7 @@ p{
   display: flex;
   overflow: hidden;
   color: black;
+  font-family: 'Doto', sans-serif;
 }
 
 .icon-wrap {
