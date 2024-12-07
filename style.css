@@ -115,7 +115,7 @@
   text-transform: uppercase; /* Optional for styling */
 }
 
-.hero-subtitle {
+.hero .hero-subtitle {
   font-size: 3rem; /* Slightly smaller for subtitle */
   font-weight: 400; /* Normal weight for balance */
   font-family: 'PP Neue Corp Tight', sans-serif; /* Use desired font */
