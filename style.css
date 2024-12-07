@@ -88,25 +88,37 @@
   margin: 0 auto 20px;
 }
 
+.hero {
+  height: 100vh; /* Full viewport height */
+  display: flex; /* Enable flexbox for centering */
+  flex-direction: column; /* Stack title and subtitle vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  background: transparent; /* Transparent background */
+  text-align: center; /* Center text alignment */
+  color: black; /* Text remains black */
+  font-family: 'PP Neue Corp Tight', sans-serif; /* Ensure font consistency */
+  padding: 0 20px; /* Add padding for responsiveness */
+}
+
 .hero-title {
-  font-size: 5.625em; /* Match the menu-link-heading font size */
-  font-weight: 700; /* Match the font weight */
-  line-height: 0.75; /* Match the line-height */
-  font-family: 'PP Neue Corp Tight', sans-serif; /* Same as menu heading */
+  font-size: 5.625em; /* Large font size */
+  font-weight: 700; /* Bold weight */
+  line-height: 0.75; /* Adjust spacing between lines */
   text-transform: uppercase; /* Optional for consistency */
-  margin-bottom: 10px;
-  margin-top: 0;
+  margin-bottom: 10px; /* Space below the title */
+  margin-top: 0; /* No top margin */
   color: black; /* Ensure readability */
 }
 
 .hero-subtitle {
-  font-size: 2rem; /* Smaller size for subtitles */
+  font-size: 2rem; /* Slightly smaller size for subtitles */
   font-weight: 400; /* A lighter weight for balance */
-  font-family: 'PP Neue Corp Tight', sans-serif; /* Match the font family */
   color: blue; /* Optional color for styling */
-  text-transform: none; /* Subtitles may not need to be uppercase */
-  margin-bottom: 20px;
+  text-transform: none; /* Subtitles don't need to be uppercase */
+  margin-bottom: 20px; /* Space below the subtitle */
 }
+
 
 
 .hero-content {
