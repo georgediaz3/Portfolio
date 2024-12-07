@@ -84,6 +84,9 @@ body {
   padding: 0;
   display: flex;
   position: relative;
+  z-index: 10; /* Ensure buttons are above other elements */
+  position: absolute;
+  cursor: pointer;
 }
 
 .button-arrow {
