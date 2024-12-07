@@ -335,7 +335,7 @@ p{
 .menu-button {
   grid-column-gap: .625em;
   grid-row-gap: .625em;
-  background-color: white;
+  background-color: 0000;
   justify-content: flex-end;
   align-items: center;
   margin: -1em;
@@ -356,6 +356,7 @@ p{
   height: 1.125em;
   display: flex;
   overflow: hidden;
+  color: white;
 }
 
 .icon-wrap {
