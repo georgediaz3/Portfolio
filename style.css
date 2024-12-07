@@ -1,3 +1,53 @@
+.goals-section {
+  padding: 80px 20px;
+  background-color: #f4f4f4; /* Light gray background */
+  text-align: center;
+  color: #333; /* Dark text for readability */
+}
+
+.goals-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-family: 'PP Neue Corp Tight', sans-serif;
+}
+
+.goals-description {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #666;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.goals-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 600px;
+  text-align: left;
+}
+
+.goals-list li {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.goals-list li::before {
+  content: "✔"; /* Checkmark icon */
+  color: #ff5722; /* Primary color */
+  font-size: 1.2rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(2px);
+}
+
+
 html {
   scroll-behavior: smooth;
 }
