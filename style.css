@@ -3,7 +3,7 @@
 // <weight>: Use a value from 100 to 900
 
 .hero-title {
-  font-size: 3rem;
+  font-size: 15rem;
   margin-bottom: 10px;
   margin-top: 10px;
   font-weight: 900; /* Bold weight */
