@@ -5,6 +5,7 @@
 .hero-title {
   font-size: 3rem;
   margin-bottom: 10px;
+  margin-top: 10px;
   font-weight: 600; /* Bold weight */
   font-family: 'Doto', sans-serif; /* Ensure it applies here too */
 }
